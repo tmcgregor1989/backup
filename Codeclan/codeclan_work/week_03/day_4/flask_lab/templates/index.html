@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+
+{% block content%}
+    <h1>Hot Gigs in your Area</h1>
+
+    <form action="/events" method="post">
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date"><br>
+        <label for="name_of_event">Event Name</label>
+        <input type="text" name="name_of_event" id="name_of_event"><br>
+        <label for="number_of_guests">Number of Guests</label>
+        <input type="text" name="number_of_guests" id="number_of_guests"><br>
+        <label for="room_location">Venue</label>
+        <input type="text" name="room_location" id="room_location"><br>
+        <label for="description">Description</label>
+        <textarea name="description" rows="3" columns="40"></textarea><br>
+        <label for="recurring">Recurring (tick box for yes)</label>
+        <input type="checkbox" name="recurring" id="recurring" unchecked><br>
+        <input type="submit" name="Add Event">
+    </form>
+
+    {% for event in events %}
+    <div>
+        <p>
+            <b>Date:</b> {{event.date}}<br>
+            <b>Name:</b> {{event.name_of_event}}<br>
+            <b>Capacity:</b> {{event.number_of_guests}}<br>
+            <b>Venue:</b> {{event.room_location}}<br>
+            <b>Description:</b> {{event.description}}<br>
+            {% if event.recurring %}
+            <b>Recurring:</b> &#9989
+            {% endif %}
+        </p>
+    </div>
+    {% endfor %}
+    {% endblock %}

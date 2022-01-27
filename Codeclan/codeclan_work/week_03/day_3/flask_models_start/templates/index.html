@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{title}} - My To-Do List</title>
+</head>
+<body>
+    <h1>My To do List!</h1>
+    {% for task in activeTasks %}
+        <div>
+            <p>
+                {{task.title}}: <b>{{task.description}}</b>
+            </p>
+        </div>
+    {% endfor %}
+</body>
+</html>

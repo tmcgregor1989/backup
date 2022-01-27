@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body > header {
+    background-color: dodgerblue;
+    color: white;
+}
+
+body > footer {
+    background-color: dodgerblue;
+}
+
+body > footer > div {
+    padding: 16px;
+    color: white;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+#logo {
+    margin: 0;
+    font-family: 'Courier New', sans-serif;
+}
+
+nav > ul > li {
+    display: inline-block;
+}
+
+body > main> article {
+    margin: auto;
+    width: 70%;
+}
+
+.like-button {
+    background-color: transparent;
+    border: 3px solid dodgerblue;
+
+}
+
+.share-button {
+    background-color: transparent;
+    border: 3px solid green;
+}
+
